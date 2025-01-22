@@ -14,21 +14,6 @@ Dự án này là một ứng dụng Minimal API được phát triển bằng A
 - **Request Body**: Không có.
 - **Response**: Mảng các công việc dạng JSON.
 
-```json
-[
-  {
-    "id": 1,
-    "name": "Đi bộ",
-    "isComplete": true
-  },
-  {
-    "id": 2,
-    "name": "Mua sắm",
-    "isComplete": false
-  }
-]
-```
-
 ![](./images/get_all_todoitems.png)
 
 ---
@@ -51,14 +36,6 @@ Dự án này là một ứng dụng Minimal API được phát triển bằng A
   - Thành công: Thông tin công việc dạng JSON.
   - Thất bại: Trả về mã lỗi `404` nếu công việc không tồn tại.
 
-```json
-{
-  "id": 1,
-  "name": "Đi bộ",
-  "isComplete": true
-}
-```
-
 ![](./images/get_todoitem_by_id.png)
 
 ---
@@ -67,23 +44,7 @@ Dự án này là một ứng dụng Minimal API được phát triển bằng A
 - **Endpoint**: `POST /todoitems`
 - **Mô tả**: Thêm một công việc mới vào danh sách.
 - **Request Body**: Dữ liệu JSON của công việc mới.
-
-```json
-{
-  "name": "Học lập trình",
-  "isComplete": false
-}
-```
-
 - **Response**: Trả về thông tin công việc vừa thêm kèm mã trạng thái `201`.
-
-```json
-{
-  "id": 3,
-  "name": "Học lập trình",
-  "isComplete": false
-}
-```
 
 ![](./images/post_add_todoitem.png)
 
@@ -93,14 +54,6 @@ Dự án này là một ứng dụng Minimal API được phát triển bằng A
 - **Endpoint**: `PUT /todoitems/{id}`
 - **Mô tả**: Cập nhật thông tin của một công việc theo ID.
 - **Request Body**: Dữ liệu JSON chứa thông tin mới.
-
-```json
-{
-  "name": "Đi bộ buổi sáng",
-  "isComplete": true
-}
-```
-
 - **Response**:
   - Thành công: Mã trạng thái `204` (Không có nội dung).
   - Thất bại: Mã trạng thái `404` nếu công việc không tồn tại.
@@ -139,20 +92,11 @@ Dự án này là một ứng dụng Minimal API được phát triển bằng A
 ---
 
 ## Kiểm tra API
-Sử dụng **Postman**, **cURL**, hoặc công cụ khác để kiểm tra các endpoint. Ví dụ:
+Sử dụng **Postman**, **cURL**, hoặc công cụ khác để kiểm tra các endpoint. 
 
-### **Kiểm tra thêm công việc mới với cURL**:
-```bash
-curl -X POST https://localhost:{port}/todoitems \
--H "Content-Type: application/json" \
--d '{"name":"Học ASP.NET","isComplete":false}'
 ```
 
 ![](./images/postman_example.png)
-
-### **Kiểm tra lấy danh sách công việc**:
-```bash
-curl https://localhost:{port}/todoitems
 ```
 
 ![](./images/get_all_curl.png)
