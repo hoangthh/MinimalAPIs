@@ -1,0 +1,54 @@
+# Các tệp hệ thống của Visual Studio
+.vs/
+.vscode/
+
+# Các tệp tạm và nhật ký
+*.log
+*.user
+*.suo
+*.tmp
+*.userosscache
+*.sln.docstates
+
+# Thư mục đầu ra của build
+bin/
+obj/
+out/
+
+# Tệp tạo bởi hệ thống tạm thời
+*.rsuser
+*.resharper
+*.DotSettings.user
+
+# Tệp phát sinh của hệ điều hành
+.DS_Store
+Thumbs.db
+
+# Tệp của NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+packages.lock.json
+.nuget/
+
+# Tệp tạm thời của IDE hoặc công cụ khác
+*.ide
+.idea/
+*.vsconfig
+
+# Secrets, tệp cấu hình riêng tư
+secrets.json
+.env
+.env.*
+
+# ASP.NET runtime file
+appsettings.Development.json
+
+# Node.js (nếu bạn có tích hợp frontend với Node.js)
+node_modules/
+
+# Các tệp khác không cần thiết
+debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
